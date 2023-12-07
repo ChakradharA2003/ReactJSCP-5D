@@ -1,8 +1,7 @@
 // Write your code here
+// Write your code here
 import {Component} from 'react'
 import './index.css'
-
-const math = require('mathjs')
 
 class EvenOddApp extends Component {
   state = {count: 0}
@@ -11,23 +10,33 @@ class EvenOddApp extends Component {
 
   onIncrement = () => {
     this.setState(prevState => ({
-      count: prevState.count + math.floor(math.random() * 101),
+      count: prevState.count + Math.ceil(Math.random() * 101),
     }))
+  }
+
+  renderEvenOrOdd = () => {
+    const {count} = this.state
+    if (count % 2 === 0) {
+      return <p className="para-1">Count is Even</p>
+    }
+    return <p className="para-1">Count is Odd</p>
   }
 
   render() {
     const {count} = this.state
+    /*
     let evenOrOdd = null
     if (count % 2 === 0) {
       evenOrOdd = 'Even'
     } else {
       evenOrOdd = 'Odd'
     }
+    */
     return (
       <div className="bg-container">
         <div className="card">
           <h1 className="heading">Count {count}</h1>
-          <p className="para-1">Count is {evenOrOdd}</p>
+          {this.renderEvenOrOdd()}
           <button type="button" className="button" onClick={this.onIncrement}>
             Increment
           </button>
