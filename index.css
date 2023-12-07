@@ -1,0 +1,45 @@
+/* Write your CSS here */
+.bg-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  background-image: linear-gradient(#ff6e7f, #bfe9ff);
+  background-size: cover;
+  height: 50vh;
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading {
+  color: #0f172a;
+  font-family: 'Roboto';
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.para-1 {
+  color: #334155;
+  font-family: 'Roboto';
+  font-size: 35px;
+}
+
+.button {
+  background-color: #ffffff;
+  width: 140px;
+  height: 30px;
+  border-radius: 10px;
+}
+
+.para-2 {
+  color: #1e293b;
+  font-family: 'Roboto';
+  font-size: 15px;
+}
